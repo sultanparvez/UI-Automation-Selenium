@@ -13,6 +13,7 @@ public class DriverManager {
         return Boolean.parseBoolean(data.get("headless"));
     }
     public static   WebDriver getDriver() throws Exception {
+        createDir(dirPath,"Data");
         createDir(dirPath,"Screenshots");
         System.setProperty("webdriver.chrome.driver", dirPath +"\\Drivers\\chromedriver.exe");
         WebDriver driver = chromeDriver(getHeadlessFlag());
@@ -25,7 +26,10 @@ public class DriverManager {
     }
 
     private static ChromeOptions defaultChromeOptions(boolean flag) throws Exception {
+        String downloadFilepath = dirPath+"\\Data";
         HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
+        chromePrefs.put("profile.default_content_settings.popups", 0);
+        chromePrefs.put("download.default_directory", downloadFilepath);
         chromePrefs.put("profile.default_content_setting_values.notifications", 2);
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
