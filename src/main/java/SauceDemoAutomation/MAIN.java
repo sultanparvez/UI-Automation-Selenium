@@ -17,7 +17,7 @@ public class MAIN {
         //Start Reporter
         AutomationReporter.initializeReporter();
         //Driver Instance
-        WebDriver driver = DriverManager.getDriver(false);//flag is for switch between headless and headed
+        WebDriver driver = DriverManager.getDriver();
         //Login and Product Selection
        AutomationReporter.startReporter("Login Page");
        LoginPage.execute(driver,test);
