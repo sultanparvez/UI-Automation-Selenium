@@ -1,6 +1,6 @@
 # UI Automation Selenium
 
-UI Test Automation Architecture using Java and Selenium WebDriver.
+UI Test Automation using Java and Selenium WebDriver.
 
 ## Languages and Frameworks
 
