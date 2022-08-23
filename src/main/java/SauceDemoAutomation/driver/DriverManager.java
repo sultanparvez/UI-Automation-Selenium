@@ -14,7 +14,7 @@ public class DriverManager {
     }
     public static   WebDriver getDriver() throws Exception {
         createDir(dirPath,"Screenshots");
-        System.setProperty("webdriver.chrome.driver", dirPath +"\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", dirPath +"/Drivers/chromedriver.exe");
         WebDriver driver = chromeDriver(getHeadlessFlag());
         return driver;
     }

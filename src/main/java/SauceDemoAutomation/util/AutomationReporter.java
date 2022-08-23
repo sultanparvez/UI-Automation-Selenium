@@ -7,8 +7,8 @@ import static SauceDemoAutomation.util.CommonUtilities.*;
 public class AutomationReporter {
     public static ExtentTest initializeReporter() throws Exception {
         createDir(dirPath,"Reports");
-        extent = new ExtentReports(dirPath + "\\Reports\\Sauce Demo Automation.html", true);
-        extent.loadConfig(new File(dirPath + "\\XML-Files\\extent-config.xml"));
+        extent = new ExtentReports(dirPath + "/Reports/Sauce Demo Automation.html", true);
+        extent.loadConfig(new File(dirPath + "/XML-Files/extent-config.xml"));
         return test;
     }
     public static ExtentTest startReporter(String testName) {

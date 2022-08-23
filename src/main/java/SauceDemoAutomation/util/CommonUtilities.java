@@ -29,13 +29,13 @@ public class CommonUtilities {
        FileUtils.copyFile(SrcFile, DestFile);
     }
     public static void moveFiles(String path, String dir) throws Exception{
-        File src = new File(path+"\\"+dir);
-        String VaultDirectoryName = dirPath+"\\"+dir;
+        File src = new File(path+"/"+dir);
+        String VaultDirectoryName = dirPath+"/"+dir;
         File directory = new File(VaultDirectoryName);
         if (! directory.exists()){
             createDir(dirPath,dir+"Vault");
         }
-        File dest = new File(path+"\\"+dir+"Vault");
+        File dest = new File(path+"/"+dir+"Vault");
 
         try {
             FileUtils.copyDirectory(src, dest);
@@ -58,14 +58,14 @@ public class CommonUtilities {
             System.out.println("Created New Directory- "+dir);
         }
         else{
-            File src = new File(path+"\\"+dir);
-            String VaultDirectoryName = dirPath+"\\"+dir;
+            File src = new File(path+"/"+dir);
+            String VaultDirectoryName = dirPath+"/"+dir;
             directory = new File(VaultDirectoryName);
             if (! directory.exists()){
                 createDir(dirPath,dir+"Vault");
             }
             System.out.println("Created New Directory - "+dir+"Vault");
-            File dest = new File(path+"\\"+dir+"Vault");
+            File dest = new File(path+"/"+dir+"Vault");
 
             try {
                 FileUtils.copyDirectory(src, dest);
